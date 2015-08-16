@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<title>Throwpass -- About</title>
+<link rel="stylesheet" type="text/css" href="general.css"/>
+<meta name="viewport" content="width=device-width">
+</head>
+<body>
+<div><a href="/">Home</a></div>
+<H1>What does it do?</H1>
+<p>Throwpass allows you to securely and conveniently transport passwords from the password database on your phone to a shared computer. For example you want to log into a website on a library computer, you can transport your website password from your phone to the library computer.</p>
+<H1>Does the server know my password?</H1>
+<p>No. Your browser generates a public key/private key pair, and displays the public key in the QR Code. The app reads this and encrypts your password using the browser's public key. This allows end to end encryption from your phone to your browser. The server never knows the key.</p>
+<H1>What type of encryption does it use?</H1>
+<p>It uses NaCl, specifically TweetNaCl.js in the browser and jnacl in the app. https is also used between the app and server, and between the server and browser, but this is mostly for authentication, not confidentiality.</p>
+<H1>What weaknesses are there?</H1>
+<p>If the server was evil, it could serve you bad javascript that would steal your website password. If the shared computer has malware it could also steal your password. Also if the certificate authority issued a bad certificate, a MITM could serve bad javascript.</p>
+<p>Also anyone who can view the screen could send a different password to you which would be a denial of service. If this happened while you were setting a password, it would allow the attacker to change your password. So Throwpass is only safe for logging in, not for setting passwords.</p>
+<H1>Why do we need this?</H1>
+<p>If you have a password database on your phone, previously there were two options to log into a shared computer: copy it by sight, or open the database on the computer.</p>
+<p>To copy by sight you need to display the password on the phone's screen then manually type it into the computer. This is time consuming especially with a long random password, and a lot of times there are typos. And anyone nearby or any security cameras can see your password. This is what I used to do and it was extremely annoying.</p>
+<p>To open the database on the computer, you need to get the database and the database software onto the computer. This could be from a flash drive or from a dropbox account. But to log into your dropbox account you need the password from your database! Also to run the database, it needs to be compatible with the shared computer's OS. And what if it needs administrator privilege or something? But the worst part is that if there is malware on the computer, it can steal your password database and your master password. I have over 500 accounts in my database, so it would steal all 500. But with Throwpass, even if the computer has malware it only will steal your one account.</p>
+<H1>Author</H1>
+Kegan Thorrez</br><img src="m.png"/>
+<H1>Donate</H1>
+17VbQM7XraR3THDSPCWrxTbqiCog4PqSFw
+<H1>Libraries</H1>
+Uses<br>
+<a href="https://github.com/dchest/tweetnacl-js">TweetNaCl.js</a><br>
+<a href="http://socket.io">socket.io</a><br>
+<a href="https://davidshimjs.github.io/qrcodejs/">qrcode.js</a><br>
+</body>
+</html>

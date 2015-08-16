@@ -1,0 +1,11 @@
+{
+  "name": "throwpass",
+  "version": "0.0.1",
+  "description": "Transports passwords between an Android app and a browser.",
+  "dependencies": {
+    "body-parser": "^1.9.3",
+    "compression": "^1.5.1",
+    "express": "~4.10.2",
+    "socket.io": "~1.2.0"
+  }
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" /> 
+<title>Throwpass</title>
+<script type="text/javascript" src="throwpass.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<meta name="viewport" content="width=450, initial-scale=1">
+</head>
+<body>
+  <div id="header">
+    <div id="links">
+      <a href="https://play.google.com/store/apps/details?id=com.throwpass.throwpass">Get app</a>
+      <a href="/instructions.html">Instructions</a>
+      <a href="/about.html">About</a>
+    </div>
+    <div id="description">
+    Throwpass - easily and safely transport passwords from your phone to a shared computer.
+    </div>
+  </div>
+  <div id="content">
+    <noscript>You need to enable javascript. The site uses in-browser encryption after all :).</noscript>
+    <div id="status">Generating keypair</div>
+    <div id="info">
+      <div id="qrcode"></div>
+      <div id="infotext">
+        <div id="id"></div>
+        <div id="pbk">Public key: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa=</div>
+      </div>
+    </div>
+    <button type="button" id="selectbutton">Reselect password for copying</button> 
+    <button type="button" id="togglebutton">Display password</button> 
+    <input type="text" id="password">
+  </div>
+  
+<script type="text/javascript" src="socket.io-1.0.0.js"></script>
+<script type="text/javascript" src="nacl-fast.min.js"></script>
+<script type="text/javascript" src="qrcode.min.js"></script>
+</body>
+</html>

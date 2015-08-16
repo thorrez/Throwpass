@@ -1,0 +1,64 @@
+@charset "utf-8";
+body{
+  font-family: sans-serif;
+}
+#description{
+  width: 300px;
+  float: left;
+}
+#links{
+  float: right;
+}
+#links a{
+  padding: 0px 5px;
+}
+#header{
+  padding: 10px;
+}
+#content{
+  display: table;
+  margin: auto;
+  clear: both;
+}
+
+#status{
+  font-size: 200%;
+  display: table;
+  margin: auto;
+}
+
+button{
+  display: none;
+  margin: 10px auto;
+  width: 20em;
+}
+
+#password{
+  border: 0px none white;
+  width: 1px;
+  height: 1px;
+  font-size: 1px;
+  color: white;
+  text-align: center;
+  display: table;
+  margin: auto;
+}
+  
+#info {
+  padding-bottom: 10px;
+  font-family: "Courier New", Courier, monospace;
+  display: table;
+  margin: auto;
+}
+
+#qrcode{
+  padding: 15px;
+  display: table;
+  margin: auto;
+}
+
+#infotext,#id,#pbk{
+  float: left;
+  clear: both;
+  visibility: hidden;
+}
