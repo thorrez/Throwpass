@@ -1,4 +1,9 @@
 @charset "utf-8";
 body{
   font-family: sans-serif;
+  margin: 40px auto;
+  padding: 0px 10px;
+  max-width: 650px;
+  line-height: 1.6;
+  font-size: 16px;
 }
